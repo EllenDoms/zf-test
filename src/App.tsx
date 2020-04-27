@@ -16,12 +16,9 @@ const App: React.FC = () => {
   const [ total, setTotal ] = useState();
 
   useEffect(() => {
-    let totalNumbers = 0;
-    numbers.map(number => {
-      totalNumbers += number.number
-    }, [numbers])
+    let totalNumbers = numbers.reduce((a, b) => a + b.number,0)
     setTotal(totalNumbers);
-  })
+  }, [numbers])
 
   const toggleSelection: ToggleSelection = selectedItem => {
     const newNumbers = numbers.map(number => {
