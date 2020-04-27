@@ -1,0 +1,81 @@
+:root {
+  --color-main: #61C9FE;
+  --color-main-light: #DEF6FA;
+  --color-main-dark: #48AADC;
+  --color-grey: #E6E6E6;
+  --color-red: #E44C4C;
+}
+
+* {
+  font-family: 'Arial', 'non-serif';
+}
+
+h1 {
+  margin: 30px 0 10px 0;
+  font-size: 24px;
+}
+h2 {
+  margin: 30px 0 10px 0;
+  font-size: 16px;
+}
+p.warning {
+  color: var(--color-red);
+  font-size: 11px;
+  text-align: center;
+  font-style: italic;
+}
+
+/*** Form ***/
+
+input {
+  border: solid 1px var(--color-grey);
+  border-radius: 3px;
+  line-height: 40px;
+  font-size: 14px;
+  padding: 0px 10px;
+  background-color: #FFF;
+}
+button {
+  background: var(--color-main);
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 3px;
+  color: #FFF;
+  padding: 0 10px;
+  line-height: 42px;
+  text-align: center;
+}
+button:hover {
+  background: var(--color-main-dark);
+  cursor: pointer;
+}
+button:focus { outline:none }
+
+/*** List ***/
+.listWrapper {
+  display: flex;
+}
+
+/*** Number ***/
+.number {
+    background: white;
+    border: solid 1px transparent;
+    padding: 0px 7px;
+    margin: 10px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 2px;
+    color: var(--color-main);
+    display: block;
+}
+.number.selected {
+  border-color: var(--color-main);
+  background-color: var(--color-main-light);
+}
+
+.number input.visually-hidden {
+    position: absolute;
+    left: -100vw;
+}
